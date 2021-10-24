@@ -1,0 +1,17 @@
+.main-section {
+  padding: 25px;
+
+  main {
+    background-color: #fff;
+    min-height: 85vh;
+    padding: 25px;
+  }
+}
+
+.nav-light {
+  color: rgba(255, 255, 255, 0.65);
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
