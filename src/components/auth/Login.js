@@ -28,7 +28,17 @@ const Login = () => {
     <Layout>
       <Content style={{ height: '100vh', marginTop: '5vh' }}>
         <Col md={{ span: 8, offset: 8 }}>
-          <Card title={<h2>Log In</h2>}>
+          <Card
+            title={
+              <>
+                <img
+                  src='img/larrys-logo.svg'
+                  alt='Larrys Electric & Heating'
+                />
+                <h2>Log In</h2>
+              </>
+            }
+          >
             <Form
               name='login'
               onFinish={handleOnFinish}
@@ -62,7 +72,7 @@ const Login = () => {
                 </Link>{' '}
                 |{' '}
                 <Link to='/' disabled={loading}>
-                  Back to larryselectric.com
+                  Return Home
                 </Link>
               </Form.Item>
             </Form>
