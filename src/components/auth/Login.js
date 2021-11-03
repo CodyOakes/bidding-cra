@@ -34,6 +34,8 @@ const Login = () => {
                 <img
                   src='img/larrys-logo.svg'
                   alt='Larrys Electric & Heating'
+                  width='50%'
+                  className='align-center'
                 />
                 <h2>Log In</h2>
               </>
@@ -42,8 +44,8 @@ const Login = () => {
             <Form
               name='login'
               onFinish={handleOnFinish}
-              labelCol={{ span: 8 }}
-              wrapperCol={{ span: 16 }}
+              labelCol={{ span: 4 }}
+              wrapperCol={{ span: 24 }}
               autoComplete='off'
             >
               <Form.Item
@@ -61,12 +63,12 @@ const Login = () => {
               >
                 <Input.Password />
               </Form.Item>
-              <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+              <Form.Item wrapperCol={{ offset: 4, span: 24 }}>
                 <Button type='primary' htmlType='submit' disabled={loading}>
                   Log In
                 </Button>
               </Form.Item>
-              <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+              <Form.Item wrapperCol={{ offset: 4, span: 24 }}>
                 <Link to='/forgot-password' disabled={loading}>
                   Forgot Password
                 </Link>{' '}
