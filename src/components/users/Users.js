@@ -2,7 +2,7 @@ import React from 'react'
 
 import useAxios from '../../hooks/useAxios'
 import { Link } from 'react-router-dom'
-import { Tag, Button, Tooltip } from 'antd'
+import { Button, Tooltip } from 'antd'
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
 import { deleteUser } from '../../actions/users'
 
@@ -25,14 +25,14 @@ const Users = () => {
       <Table
         columns={[
           {
-            title: 'Email',
-            dataIndex: 'email',
-            key: 'email',
+            title: 'First Name',
+            dataIndex: 'firstName',
+            key: 'firstName',
           },
           {
-            title: 'Display Name',
-            dataIndex: 'displayName',
-            key: 'displayName',
+            title: 'Last Name',
+            dataIndex: 'lastName',
+            key: 'lastName',
           },
           {
             title: 'Phone Number',
@@ -40,24 +40,9 @@ const Users = () => {
             key: 'phoneNumber',
           },
           {
-            title: 'Disabled',
-            dataIndex: 'disabled',
-            key: 'disabled',
-            render: (disabled) => <>{disabled ? 'True' : 'False'}</>,
-          },
-          {
-            title: 'Access Levels',
-            dataIndex: 'accessLvls',
-            key: 'accessLvls',
-            render: (accessLvls) => (
-              <>
-                {accessLvls.map((accessLvl) => (
-                  <Tag color={'geekblue'} key={accessLvl}>
-                    {accessLvl}
-                  </Tag>
-                ))}
-              </>
-            ),
+            title: 'Type',
+            dataIndex: 'type',
+            key: 'type',
           },
           {
             title: 'Edit',

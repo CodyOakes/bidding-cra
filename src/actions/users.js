@@ -10,23 +10,9 @@ export const logout = () => auth.signOut()
 
 export const resetPassword = (email) => auth.sendPasswordResetEmail(email)
 
-export const postUser = async ({
-  displayName,
-  phoneNummber,
-  email,
-  password,
-  accessLvls,
-  disabled,
-}) => {
+export const postUser = async (values) => {
   try {
-    const res = await api.post(`/users`, {
-      displayName,
-      phoneNummber,
-      email,
-      password,
-      accessLvls,
-      disabled,
-    })
+    const res = await api.post(`/users`, { ...values })
     const payload = res.data
     message.success(
       `Success! You have successfully created user with email: ${payload.email}`
